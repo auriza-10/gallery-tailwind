@@ -1,15 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body class="bg-red-600">
-    <div id="app">
-      <h1 class="text-3xl md:text-5xl lg:text-4xl"> Hola mundo </h1>
+  <body class="bg-gray-50">
+    <main class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-7 gap-7">
+      <div  class="box col-span-1 aspect-square bg-amber-400">amber</div>
+      <div class="box md:col-span-3 aspect-video bg-blue-500">blue</div>
+      <div class="box md:col-span-5 aspect-square bg-cyan-300">cyan</div>
+      <div class="box col-span-4 aspect-square bg-lime-400">lime</div>
+      <div class="box col-span-1 md:aspect-auto bg-pink-500">pink</div>
+      <div class="box md:col-span-5 lg:aspect-square bg-red-600">red</div>
+      <div class="box col-span-1 aspect-square bg-green-500">green</div>
+      <div class="box md:col-span-2 aspect-square bg-yellow-500">yellow</div>
+      <div class="box col-span-1 lg:aspect-square bg-purple-500">purple</div>
+      <div class="box col-span-6 aspect-square bg-gray-500">gray</div>
     </div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

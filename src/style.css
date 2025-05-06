@@ -1,1 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Chelsea+Market&family=Gabarito:wght@400..900&family=IM+Fell+English+SC&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&family=Press+Start+2P&family=Rubik+Bubbles&family=Tektur:wght@400..900&family=Turret+Road:wght@200;300;400;500;700;800&family=Yatra+One&display=swap');
 @import "tailwindcss";
+
+@layer theme {
+  :root {
+    --default-font-family: Chelsea Market;
+  }
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--default-font-family);
+
+  }
+
+}
+
+@layer components {
+  .box {
+    @apply bg-black text-white rounded-md flex items-center justify-center p-4;
+    
+  }
+}
+
+@layer utilities {
+  .aspect.portrait {
+    aspect-ratio: 1/2;
+  }
+}
