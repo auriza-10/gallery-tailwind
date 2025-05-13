@@ -1,30 +1,48 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Chelsea+Market&family=Gabarito:wght@400..900&family=IM+Fell+English+SC&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&family=Press+Start+2P&family=Rubik+Bubbles&family=Tektur:wght@400..900&family=Turret+Road:wght@200;300;400;500;700;800&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 @import "tailwindcss";
 
 @layer theme {
-  :root {
-    --default-font-family: Chelsea Market;
-  }
+    :root {
+        --default-font-family: "Cal Sans", sans-serif;
+    }
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--default-font-family);
-
-  }
-
+    img {
+        @apply w-full !h-full object-cover;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--default-font-family);
+    }
+    input {
+        @apply w-full !px-4 !py-2 !rounded-lg !border !border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
 }
 
 @layer components {
-  .box {
-    @apply bg-black text-white rounded-md flex items-center justify-center p-4;
-    
-  }
+
+    .box {
+        @apply relative rounded flex items-center justify-center overflow-hidden border border-dashed border-gray-300 col-span-1 row-span-1 aspect-square p-2;
+    }
+      
+    .box-double {
+        @apply col-span-2 row-span-2;
+        aspect-ratio: 2 / 2; /* cuadrado grande */
+    }
+      
+    .box-portrait {
+        @apply col-span-1 row-span-2;
+        aspect-ratio: 1 / 2; /* vertical */
+    }
+      
+    .box-landscape {
+        @apply col-span-2 row-span-1;
+        aspect-ratio: 2 / 1; /* horizontal */
+    }
+      
 }
 
 @layer utilities {
-  .aspect.portrait {
-    aspect-ratio: 1/2;
-  }
+    
 }

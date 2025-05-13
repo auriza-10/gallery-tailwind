@@ -1,46 +1,136 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Vite App</title>
-  </head>
-  <body class="bg-gray-50">
-    <main class="container mx-auto p-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-7">
-        <div class="box aspect-square bg-green-700">
-          <img src="img/armageddon.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bento Gallery | Tailwind Grid</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-gray-200">
+
+  <main class="container mx-auto p-4">
+    <form id="searchForm" class="mb-8">
+      <div class="flex gap-4 max-w-2xl mx-auto">
+        <div class="flex-1">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Buscar imágenes..."
+            required
+            minlength="3"
+            maxlength="50"
+          />
+          <div id="searchError" class="text-red-500 text-sm mt-1 hidden"></div>
         </div>
-        <div class="box aspect-square bg-pink-600">
-          <img src="img/glitch mode.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <button 
+          type="submit"
+          class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Buscar
+        </button>
+      </div>
+    </form>
+
+    <div id="grid-container" class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-4 lg:grid-cols-6 lg:grid-rows-6 grid-flow-dense auto-rows-fr auto-cols-fr">
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=1" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-gray-500">
-          <img src="img/kai.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box box-landscape">
+          <img src="https://picsum.photos/640/320?grayscale&random=2" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-gray-600">
-          <img src="img/kick back.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box box-portrait">
+          <img src="https://picsum.photos/320/640?grayscale&random=3" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-red-600">
-          <img src="img/peek a boo.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=4" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-blue-600">
-          <img src="img/riizing.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box box-double">
+          <img src="https://picsum.photos/640/640?grayscale&random=5" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-red-800">
-          <img src="img/ruby.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=6" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-sky-400">
-          <img src="img/seulgi.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box box-landscape">
+          <img src="https://picsum.photos/640/320?grayscale&random=7" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-sky-950">
-          <img src="img/walk.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=8" alt="Random Img"/>
         </div>
-        <div class="box aspect-square bg-yellow-300">
-          <img src="img/zimzalabim.jpg" alt="Random Img" class="w-full h-full object-cover"/>
+        <div class="box box-portrait">
+          <img src="https://picsum.photos/320/640?grayscale&random=9" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=10" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=11" alt="Random Img"/>
+        </div>
+        <div class="box box-landscape">
+          <img src="https://picsum.photos/640/320?grayscale&random=12" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=13" alt="Random Img"/>
+        </div>
+        <div class="box box-portrait">
+          <img src="https://picsum.photos/320/640?grayscale&random=14" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=15" alt="Random Img"/>
+        </div>
+        <div class="box box-double">
+          <img src="https://picsum.photos/640/640?grayscale&random=16" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=17" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=18" alt="Random Img"/>
+        </div>
+        <div class="box box-landscape">
+          <img src="https://picsum.photos/640/320?grayscale&random=19" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=20" alt="Random Img"/>
+        </div>
+        <div class="box box-portrait">
+          <img src="https://picsum.photos/320/640?grayscale&random=21" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=22" alt="Random Img"/>
+        </div>
+        <div class="box box-double">
+          <img src="https://picsum.photos/640/640?grayscale&random=23" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=24" alt="Random Img"/>
+        </div>
+        <div class="box box-landscape">
+          <img src="https://picsum.photos/640/320?grayscale&random=25" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=26" alt="Random Img"/>
+        </div>
+        <div class="box box-portrait">
+          <img src="https://picsum.photos/320/640?grayscale&random=27" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=28" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=29" alt="Random Img"/>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/320/320?grayscale&random=30" alt="Random Img"/>
         </div>
       </div>
-    </main>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+      <div id="pagination" class="w-full">
+        <!-- acá va la paginación -->
+      </div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
